@@ -1,6 +1,11 @@
 .slider {
   position: relative;
-  overflow: auto;
+}
+
+.slider:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .slider li {
