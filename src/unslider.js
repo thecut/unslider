@@ -143,7 +143,7 @@
 				//  Handle those pesky dots
 				el.find('.dot:eq(' + index + ')').addClass('active').siblings().removeClass('active');
 
-				el.animate(obj, speed) && ul.animate($.extend({left: '-' + index + '00%'}, obj), speed, function(data) {
+				el.animate(obj, speed).css('overflow','visible') && ul.animate($.extend({left: '-' + index + '00%'}, obj), speed, function(data) {
 					_.i = index;
 
 					$.isFunction(o.complete) && !callback && o.complete(el);
