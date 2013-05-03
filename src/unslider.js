@@ -22,7 +22,8 @@
 			fluid: f,     // is it a percentage width? (boolean)
 			complete: f,  // invoke after animation (function with argument)
 			items: '>ul', // slides container selector
-			item: '>li'   // slidable items selector
+			item: '>li',   // slidable items selector
+			startitem: '1' // set initial item
 		};
 
 		_.init = function(el, o) {
