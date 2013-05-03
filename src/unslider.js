@@ -51,8 +51,9 @@
 				si = o.startitem - 1,
 				len = li.length;
 
-			//  Current indeed
-			_.i = 0;
+
+			//  Current index
+			_.i = si;
 
 			//  Set the main element
 			//el.css({width: _.max[0], height: li.first().outerHeight() });
