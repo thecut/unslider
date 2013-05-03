@@ -32,6 +32,13 @@
 
 			_.el = el;
 			_.ul = el.find(_.o.items);
+
+			// Cloning
+			//alert((_.ul.find(_.o.item).length));
+			//alert(_.ul.first());
+			_.ul.children().last().clone().prependTo(_.ul);
+			_.ul.children('li:nth-child(2)').clone().appendTo(_.ul);
+
 			_.max = [el.outerWidth() | 0, el.outerHeight() | 0];
 			_.li = _.ul.find(_.o.item).each(function(index) {
 				var me = $(this),
@@ -40,17 +47,15 @@
 
 				//  Set the max values
 				if (width > _.max[0]) _.max[0] = width;
-				if (height > _.max[1]) _.max[1] = height;
+				//if (height > _.max[1]) _.max[1] = height;
 			});
-
 
 			//  Cached vars
 			var o = _.o,
 				ul = _.ul,
 				li = _.li,
 				si = o.startitem - 1,
-				len = li.length;
-
+				len = li.length; //+ 2;  the '+2' are the clones
 
 			//  Current index
 			_.i = si;
