@@ -59,7 +59,7 @@
 			//el.css({width: _.max[0], height: li.first().outerHeight() });
 
 			//  Set the relative widths
-			ul.css({position: 'relative', left: 0, width: (len * 100) + '%'});
+			ul.css({position: 'relative', left: "-" + si + '00%', width: (len * 100) + '%'});
 			li.css({'float': 'left', width: (100 / len) + '%'});
 
 			//  Autoslide
