@@ -48,6 +48,7 @@
 			var o = _.o,
 				ul = _.ul,
 				li = _.li,
+				si = o.startitem - 1,
 				len = li.length;
 
 			//  Current indeed
