@@ -143,14 +143,18 @@
 			if (index < 0) index = li.length - 1;
 			target = li.eq(index);
 
-			var speed = callback ? 5 : o.speed | 0,
-				obj = {height: target.outerHeight()};
+			//var speed = callback ? 5 : o.speed | 0,
+				//obj = {height: target.outerHeight()};
+
+			var speed = callback ? 5 : o.speed | 0;
 
 			if (!ul.is(':animated')) {
 				//  Handle those pesky dots
 				el.find('.dot:eq(' + index + ')').addClass('active').siblings().removeClass('active');
 
-				el.animate(obj, speed).css('overflow','visible') && ul.animate($.extend({left: '-' + index + '00%'}, obj), speed, function(data) {
+				//el.animate(obj, speed).css('overflow','visible') &&
+				//ul.animate($.extend({left: '-' + index + '00%'}, obj), speed, function(data) {
+				ul.animate(({left: '-' + index + '00%'}), speed, function(data) {
 					_.i = index;
 
 					$.isFunction(o.complete) && !callback && o.complete(el);
