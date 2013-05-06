@@ -63,7 +63,7 @@
 
 			//  Set the relative widths
 			ul.css({position: 'relative', left: "-" + si + '00%', width: (len * 100) + '%'});
-			li.css({'float': 'left', width: (100 / len) + '%'});
+			li.css({width: (100 / len) + '%'});
 
 			//  Autoslide
 			setTimeout(function() {
