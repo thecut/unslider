@@ -132,7 +132,8 @@
 				ul = _.ul,
 				li = _.li,
 				current = _.i,
-				target = li.eq(index);
+				target = li.eq(index),
+				len = li.length;
 
 			//  To slide or not to slide
 			if ((!target.length || index < 0) && o.loop == f) return;
