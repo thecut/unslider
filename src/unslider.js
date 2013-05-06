@@ -157,6 +157,16 @@
 				ul.animate(({left: '-' + index + '00%'}), speed, function(data) {
 					_.i = index;
 
+					if (_.i == 0) {
+						ul.css('left','-' + (len - 2) +'00%'),
+						_.i = len - 2;
+					}
+
+					if (_.i == len - 1) {
+						ul.css('left','-100%');
+						_.i = 1;
+					}
+
 					$.isFunction(o.complete) && !callback && o.complete(el);
 				});
 			};
