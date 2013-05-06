@@ -23,7 +23,7 @@
 			complete: f,  // invoke after animation (function with argument)
 			items: '>ul', // slides container selector
 			item: '>li',   // slidable items selector
-			startitem: '1' // set initial item
+			startitem: 1 // set initial slide
 		};
 
 		_.init = function(el, o) {
@@ -52,8 +52,8 @@
 			var o = _.o,
 				ul = _.ul,
 				li = _.li,
-				si = o.startitem - 1,
-				len = li.length; //+ 2;  the '+2' are the clones
+				si = o.startitem,
+				len = li.length;
 
 			//  Current index
 			_.i = si;
