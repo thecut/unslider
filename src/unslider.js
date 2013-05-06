@@ -33,11 +33,9 @@
 			_.el = el;
 			_.ul = el.find(_.o.items);
 
-			// Cloning
-			//alert((_.ul.find(_.o.item).length));
-			//alert(_.ul.first());
-			_.ul.children().last().clone().prependTo(_.ul);
-			_.ul.children('li:nth-child(2)').clone().appendTo(_.ul);
+			// Initial Cloning
+			_.ul.children().last().clone().addClass('clone').prependTo(_.ul);
+			_.ul.children(':nth-child(2)').clone().addClass('clone').appendTo(_.ul);
 
 			_.max = [el.outerWidth() | 0, el.outerHeight() | 0];
 			_.li = _.ul.find(_.o.item).each(function(index) {
