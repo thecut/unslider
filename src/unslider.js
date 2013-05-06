@@ -100,20 +100,20 @@
 			o.arrows && nav('arrow');
 
 			//  Patch for fluid-width sliders. Screw those guys.
-			if (o.fluid) {
-				$(window).resize(function() {
-					_.r && clearTimeout(_.r);
+			// if (o.fluid) {
+			// 	$(window).resize(function() {
+			// 		_.r && clearTimeout(_.r);
 
-					_.r = setTimeout(function() {
-						var styl = {height: li.eq(_.i).outerHeight()},
-							width = el.outerWidth();
+			// 		_.r = setTimeout(function() {
+			// 			var styl = {height: li.eq(_.i).outerHeight()},
+			// 				width = el.outerWidth();
 
-						ul.css(styl);
-						styl['width'] = Math.min(Math.round((width / el.parent().width()) * 100), 100) + '%';
-						el.css(styl);
-					}, 50);
-				}).resize();
-			};
+			// 			ul.css(styl);
+			// 			styl['width'] = Math.min(Math.round((width / el.parent().width()) * 100), 100) + '%';
+			// 			el.css(styl);
+			// 		}, 50);
+			// 	}).resize();
+			// };
 
 			//  Swipe support
 			if ($.event.special['swipe'] || $.Event('swipe')) {
